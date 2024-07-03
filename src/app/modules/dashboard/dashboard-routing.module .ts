@@ -12,7 +12,7 @@ import { ProsyncHomeComponent } from './components/prosync-demo/prosync-home/pro
 const routes: Routes = [
     { path: '', component: LandingPageComponent, 
       children: [
-        { path: 'prosync', component: ProsyncHomeComponent },
+        { path: '', component: ProsyncHomeComponent },
         { path: 'gln', component: GlnDetailsComponent },
       ]
     }
