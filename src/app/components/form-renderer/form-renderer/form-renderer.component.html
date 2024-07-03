@@ -19,7 +19,7 @@
     <div class="form-area">
         <div class="form-container">
             <ng-container *ngFor="let component of form?.components">
-                <!-- <ng-container [ngSwitch]="component?.type">
+                <ng-container [ngSwitch]="component?.type">
                     <app-label *ngSwitchCase="'label'" [config]="component" [editMode]="false"></app-label>
                     <app-text-field *ngSwitchCase="'textfield'" [config]="component" (updateValueEvent)="updateValue($event,component)"  [editMode]="false"></app-text-field>
                     <app-text-area *ngSwitchCase="'textarea'" [config]="component" (updateValueEvent)="updateValue($event,component)" [editMode]="false"></app-text-area>
@@ -28,7 +28,7 @@
                     <app-checkbox *ngSwitchCase="'checkbox'" [config]="component"  [editMode]="false" ></app-checkbox>
                     <app-selectbox *ngSwitchCase="'selectbox'" [config]="component"  (updateValueEvent)="updateValue($event,component)" [editMode]="false" ></app-selectbox>
                     <app-radio *ngSwitchCase="'radio'" [config]="component"  [editMode]="false"></app-radio>
-                </ng-container> -->
+                </ng-container>
             </ng-container>
         </div>
     </div>

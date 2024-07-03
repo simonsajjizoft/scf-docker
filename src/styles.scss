@@ -165,3 +165,23 @@ cite {
 .first-letter-caps {
     text-transform: capitalize !important;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+  background: #fefeff;
+  border: 3px solid rgba(218, 218, 218, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #ebebeb;
+}

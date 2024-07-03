@@ -1,4 +1,4 @@
-<!-- <div class="p-relative field-ctn" *ngIf="!config?.hide" [ngClass]="{ 'left': config?.labelPosition === 'left', 'top': config?.labelPosition === 'top' }" [ngStyle]="{'margin-top':(editMode ? '5px' : ''),'margin-bottom':editMode ? '5px' : '','padding-top':(editMode ? '15px' : ''),'padding-bottom':(editMode ? '15px' : '')}">
+<div class="p-relative field-ctn" *ngIf="!config?.hide" [ngClass]="{ 'left': config?.labelPosition === 'left', 'top': config?.labelPosition === 'top' }" [ngStyle]="{'margin-top':(editMode ? '5px' : ''),'margin-bottom':editMode ? '5px' : '','padding-top':(editMode ? '15px' : ''),'padding-bottom':(editMode ? '15px' : '')}">
   <div class="edit-controls" *ngIf="editMode">
     <div class="f-w-400 f-s-12 p-6 d-flex align-center icon-ctn" (click)="editElement()">
       <i class="fa fa-edit c-text"></i>
@@ -17,4 +17,4 @@
         <span class="radio-label m-r-30">{{config!.itemTemplate ?  getLabelbyPathName(option,config!.itemTemplate) : option?.name }}</span>
       </label>
     </div>
-</div> -->
+</div>

@@ -3,3 +3,32 @@
     min-height: 100%!important;
     height: 100%;
 }
+
+.grid-3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+.grid-3  div{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.grid-3  span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.circle-inner{
+    position: absolute;
+    top:4px;
+    left:2.5px
+}
