@@ -8,21 +8,18 @@
             </div>
         </div>
 
-            <div class="gtin-container m-t-20 align-center">
-                <div *ngFor="let gtin of gtins" class="gtin-item"> 
-                    <div class="c-box d-flex align-center ">
-                        <label>
-                            <input type="checkbox" class="c-box"
-                                [checked]="">
-                            <span class="checkbox-custom c-pointer"></span>
-                            
-                        </label>
-                    </div>
-                    <div class="m-t-2"><img src="assets/icons/barcode.svg" class=" m-r-5 c-pointer" alt=""></div>
-                    <div class="m-t-7"> {{ gtin.gtin }}</div>
-                   
+        <div class="gtin-container m-t-20 align-center">
+            <div *ngFor="let gtin of gtins" class="gtin-item"> 
+                <div class="c-box d-flex align-center">
+                    <label>
+                        <input type="checkbox" class="c-box"
+                            [checked]="gtin.checked">
+                        <span class="checkbox-custom c-pointer"></span>
+                    </label>
                 </div>
+                <div class="m-t-2"><img src="assets/icons/barcode.svg" class="m-r-5 c-pointer" alt=""></div>
+                <div class="m-t-6">{{ gtin.gtin }}</div>
             </div>
-        
+        </div>
     </div>
 </div>
