@@ -1,0 +1,20 @@
+<!-- <div class="p-relative field-ctn" *ngIf="!config?.hide" [ngClass]="{ 'left': config?.labelPosition === 'left', 'top': config?.labelPosition === 'top' }" [ngStyle]="{'margin-top':(editMode ? '5px' : ''),'margin-bottom':editMode ? '5px' : '','padding-top':(editMode ? '15px' : ''),'padding-bottom':(editMode ? '15px' : '')}">
+  <div class="edit-controls" *ngIf="editMode">
+    <div class="f-w-400 f-s-12 p-6 d-flex align-center icon-ctn" (click)="editElement()">
+      <i class="fa fa-edit c-text"></i>
+    </div>
+    <div class="f-w-400 f-s-13 p-5 p-b-4 p-r-3 d-flex align-center icon-ctn bg-red" (click)="deleteElement()">
+      <i class="fa fa-close"></i>
+    </div>
+  </div>
+    <label for="radio" *ngIf="!config?.hideLabel" class="outer-label" [ngStyle]="{ 'width': config?.labelWidth }">
+      {{ config?.label }}
+    </label>
+    <div class="radio-group" [ngClass]="{ 'row': config?.layout === 'row', 'column': config?.layout === 'column' }">
+      <label *ngFor="let option of config?.values" [for]="(config!.itemTemplate ?  getLabelbyPathName(option,config!.itemTemplate) : option?.value) + config?._id" class="radio-item">
+        <input type="radio" [id]="(config!.itemTemplate ?  getLabelbyPathName(option,config!.itemTemplate) : option?.value) + config?._id" class="input-radio c-box" [checked]="option.checked" [disabled]="option.disabled" name="radioGroup">
+        <span class="radio-custom"></span>
+        <span class="radio-label m-r-30">{{config!.itemTemplate ?  getLabelbyPathName(option,config!.itemTemplate) : option?.name }}</span>
+      </label>
+    </div>
+</div> -->

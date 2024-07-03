@@ -1,0 +1,50 @@
+.vertical-seperator{
+    min-height: 100%;
+}
+
+.form-area{
+    padding: 5px;
+    width: calc(80%);
+    min-height: 100%;
+}
+
+.form-container{
+    border-radius: 6px;
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    overflow-y: scroll;
+}
+
+.form-controls{
+    width: calc(20%);
+    background-color: rgb(253, 254, 255);
+    overflow-y: scroll;
+    max-height: 100%;
+}
+
+::ng-deep.mat-mdc-tab-header{
+    padding-bottom: 0px!important;
+}
+
+.h-max{
+    height: 100%;
+    
+}
+
+.loader-parent {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 9;
+}
+
+.loader-parent img {
+    width: 90px;
+    margin-left: 45px;
+}
+
+
+.empty-space{
+    height: 20vh;
+    min-height: 20vh;
+}

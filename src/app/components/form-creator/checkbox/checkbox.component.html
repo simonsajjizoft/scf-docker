@@ -1,0 +1,20 @@
+<!-- <div class="p-relative field-ctn" *ngIf="!config?.hide" [ngClass]="{'left': config?.labelPosition === 'left', 'top': config?.labelPosition === 'top'}"  [ngStyle]="{'margin-top':(editMode ? '5px' : ''),'margin-bottom':editMode ? '5px' : '','padding-top':(editMode ? '15px' : ''),'padding-bottom':(editMode ? '15px' : '')}">
+    <div class="edit-controls" *ngIf="editMode">
+        <div class="f-w-400 f-s-12 p-6 d-flex align-center icon-ctn" (click)="editElement()">
+            <i class="fa fa-edit c-text"></i>
+        </div>
+        <div class="f-w-400 f-s-13 p-5 p-b-4 p-r-3 d-flex align-center icon-ctn bg-red" (click)="deleteElement()">
+            <i class="fa fa-close"></i>
+        </div>
+    </div>
+    <label for="checkbox" *ngIf="!config?.hideLabel" [ngStyle]="{'width': config?.labelWidth}" class="outer-label">
+        {{ config?.label }}
+    </label>
+    <div class="checkbox-group"  [ngClass]="{'column': config?.layout === 'column', 'row': config?.layout === 'row'}">
+        <label *ngFor="let option of config?.values" [for]="getLabelbyPathName(option,config!.itemTemplate) ? (getLabelbyPathName(option,config!.itemTemplate) + config?._id) : (option?.value + config?.id)" class="checkbox-item">
+            <input type="checkbox" [id]="getLabelbyPathName(option,config!.itemTemplate) ? (getLabelbyPathName(option,config!.itemTemplate) + config?._id) : ( option?.value + config?.id)" class="input-checkbox c-box" [checked]="option.checked" [disabled]="option.disabled">
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-label  m-r-30">{{config!.itemTemplate ?  getLabelbyPathName(option,config!.itemTemplate) : option?.name }}</span>
+        </label>
+    </div>
+</div> -->

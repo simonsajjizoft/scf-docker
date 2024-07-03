@@ -1,0 +1,15 @@
+<div>
+  <mat-dialog-content class="message text-center">
+    {{ message }}
+  </mat-dialog-content>
+  <mat-dialog-actions class="main d-flex m-b-10">
+
+  <button  cdkFocusInitial mat-raised-button class="button yes-button"  (click)="onConfirm()">{{'ok' | translate}}</button>
+
+  <button   mat-raised-button class="button no-button " (click)="onCancel()">{{'cancel' | translate}}</button>
+   
+  </mat-dialog-actions>
+
+
+
+  

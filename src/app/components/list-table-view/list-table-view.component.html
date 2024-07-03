@@ -1,0 +1,39 @@
+<div class=" w-table">
+    <!-- <div class="d-flex m-b-10 p-l-20 p-r-15 table-header-section">
+        <div class="d-flex p-4" *ngFor="let col of columns"
+            [ngClass]="{'width-small-th': col.width === 'small', 'width-medium-th': col.width === 'medium', 'width-large-th': col.width === 'large'}">
+            <p class="m-b-0 f-s-14 f-w-500 table-head">{{col.name | translate}}</p>
+        </div>
+    </div>
+    <div class="horizontal m-b-10"></div>
+    <div class="table-body" #tableBody>
+        <div class="d-flex p-l-20 table-row" *ngFor="let item of tableDatas">
+            <div class="d-flex c-pointer p-4" (click)="navigateToDetails(val.id,item)" *ngFor="let val of item"
+                [ngClass]="{'width-small': val.width === 'small', 'width-medium': val.width === 'medium', 'width-large': val.width === 'large'}">
+                <p class="f-s-13 table-data" *ngIf="val.time">{{val.value | date : 'MMMM dd, yyyy hh:mm a'}}</p>
+                <div class="align-center table-data" *ngIf="val?.icon"><img class="small-icon m-r-10"
+                        [ngClass]="{'padding-small': val.width === 'small', 'padding-img-medium': val.width === 'medium', 'padding-large': val.width === 'large'}"
+                        src="{{val.icon}}"></div>
+                <p [ngClass]="{'padding-small': val.width === 'small', 'padding-medium': val.width === 'medium', 'padding-large': val.width === 'large'}"
+                    class="m-b-0 table-data" *ngIf="!val?.time">{{val.value}}</p>
+            </div>
+        </div>
+    </div> -->
+    <div class="table">
+        <div class="table-body" #tableBody>
+            <div class="table-row table-header">
+                <div class="table-cell " [title]="col?.name | translate" [ngClass]="{'width-small': col.width === 'small', 'width-medium': col.width === 'medium', 'width-large': col.width === 'large'}" *ngFor="let col of columns">{{col?.name | translate}}</div>
+            </div>
+            <div class="table-row" *ngFor="let item of tableDatas" [ngClass]="selectedItemId && selectedItemId==item[0].id ? 'selected-row':''">
+                <div class="table-cell c-pointer" [title]="val?.time ? (val.value | date : 'MMMM dd, yyyy hh:mm a') : val?.value" (click)="navigateToDetails(val.id,item)" [ngClass]="{'width-small': val.width === 'small', 'width-medium': val.width === 'medium', 'width-large': val.width === 'large'}" *ngFor="let val of item">
+                    <div class="cell-content" >
+                        <span class="align-center" *ngIf="val?.icon"><img class="small-icon m-r-10"
+                            [ngClass]="{'padding-small': val.width === 'small', 'padding-img-medium': val.width === 'medium', 'padding-large': val.width === 'large'}"
+                            src="{{val.icon}}"></span>
+                        <span class=" ellipsis">{{val?.time ? (val.value | date : 'MMMM dd, yyyy hh:mm a') : val?.value}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

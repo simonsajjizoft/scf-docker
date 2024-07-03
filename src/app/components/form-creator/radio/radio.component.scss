@@ -1,0 +1,153 @@
+.field-ctn {
+    padding-right: 10px;
+}
+
+.radio-group{
+    flex:1!important;
+    width: calc(100% - 0px)!important;
+    min-width: 20px!important;
+}
+
+
+label.outer-label{
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.left{
+    display:flex;
+    flex-direction:row;
+    label.outer-label{
+        padding: 15px 0px!important;
+    }
+
+}
+
+.top{
+    display:inline-block!important;
+    flex:1;
+    width: 100%;
+
+    label.outer-label{
+        width: 100%!important;
+        padding: 0px!important;
+
+    }
+}
+
+
+.edit-controls {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    display: none;
+    gap: 15px;
+    align-items: center;
+}
+
+.field-ctn:hover {
+    .edit-controls {
+        position: absolute;
+        display: flex;
+        right: 10px;
+        top: -10px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+}
+
+.c-red {
+    color: rgb(186, 42, 42);
+}
+
+.icon-ctn {
+    background-color: rgb(233, 242, 242);
+    border-radius: 50%;
+}
+
+.bg-red {
+    background-color: rgb(242, 218, 218);
+    color: red !important
+}
+
+.edit-controls>div {
+    cursor: pointer;
+}
+
+
+.c-box {
+    position: relative;
+}
+
+input[type="radio"].c-box {
+    display: none;
+}
+
+.radio-group {}
+
+.radio-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid var(--checkbox-background-color);;
+    border-radius: 3px;
+    margin-right: 5px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.radio-label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+input[type="radio"].c-box:checked+.radio-custom {
+    background-color: var(--checkbox-background-color);;
+}
+
+input[type="radio"].c-box:checked+.radio-custom::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* Making it circular */
+    background-color: #fff;
+}
+
+.radio-group.row .radio-item {
+    display: inline-block;
+    display: flex!important;
+    margin-bottom:10px;
+}
+
+.radio-group.row {
+    display: flex!important;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+.radio-group.column .radio-item {
+    display: block;
+    align-items: center;
+    margin-right: 35px!important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    // padding-left: 35px!important;
+}
+
+.radio-group.column .radio-item .radio-label{
+    padding-bottom: 10px!important;
+}
+
+.radio-group.row .radio-item .radio-label{
+    padding-bottom: 5px!important;
+}
+

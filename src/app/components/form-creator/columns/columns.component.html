@@ -1,0 +1,21 @@
+<!-- <div  [ngClass]="editMode ? 'ctn':''">
+    <div class="columns-container p-relative field-ctn " [ngClass]="{ 'border-ctn':editMode ,'columns-2' : (config?.columnLength==2 && config?.subType=='columns-2'),'columns-1' : config?.columnLength==1,'columns-3' : config?.columnLength==3,'columns-4' : config?.columnLength==4,'columns-1-2':(config?.columnLength==2 && config?.subType=='columns-1-2'),'columns-2-1':(config?.columnLength==2 && config?.subType=='columns-2-1')}">
+        <div class="edit-controls" *ngIf="editMode">
+            <div class="f-w-400 f-s-12 p-6 d-flex align-center icon-ctn" (click)="editElement(config)" ><i class="fa fa-edit c-text"></i></div>
+            <div class="f-w-400 f-s-13 p-5 p-b-4 p-r-3  d-flex align-center icon-ctn bg-red" (click)="deleteColumns(config)"><i class="fa fa-close"></i></div>
+        </div>
+        <div class="column" *ngFor="let column of config?.columns" [ngClass]="column?.type ? '' :''">
+            <ng-container  *ngIf="!column?.type && editMode">
+                <app-menu [config]="column" (selectMenuItemEvent)="selectDropdown($event)"></app-menu>
+            </ng-container>
+            <ng-container *ngIf="column?.type">
+                <ng-container [ngSwitch]="column?.type">
+                    <app-text-field *ngSwitchCase="'textfield'" [config]="column" (deleteEvent)="removeElement($event)" (updateValueEvent)="updateValue($event,column)" (editEvent)="editElement($event)" [editMode]="editMode"></app-text-field>
+                    <app-text-area *ngSwitchCase="'textarea'" [config]="column" (deleteEvent)="removeElement($event)" (editEvent)="editElement($event)" (updateValueEvent)="updateValue($event,column)" [editMode]="editMode"></app-text-area>
+                    <app-label *ngSwitchCase="'label'" [config]="column" (deleteEvent)="removeElement($event)" (editEvent)="editElement($event)" [editMode]="editMode"></app-label>
+                    <app-number *ngSwitchCase="'number'" [config]="column" (deleteEvent)="removeElement($event)" (updateValueEvent)="updateValue($event,column)" (editEvent)="editElement($event)" [editMode]="editMode"></app-number>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div> -->

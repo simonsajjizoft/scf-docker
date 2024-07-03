@@ -1,0 +1,35 @@
+
+<div *ngIf="showLoader"  class="loader-parent">
+    <img src="assets/gif/loader.gif">
+</div>
+
+<div class="scrollable-div">
+    <!-- <div class="d-flex align-center j-end">
+        <div class="m-r-15 error-chip err p-relative" *ngIf="validations && validations?.length>0">
+            <div (click)="isshowValidations=!isshowValidations" class="err c-pointer">Errors <i class="fa fa-chevron-down"></i></div>
+            <div class="err err-component-div p-absolute" *ngIf="isshowValidations">
+                <ul class="ul-ctn f-s-13 ">
+                    <ng-container *ngFor="let item of validations">
+                        <li>{{item}}</li>
+                    </ng-container>
+                </ul>
+            </div>
+          </div>
+    </div> -->
+    <div class="form-area">
+        <div class="form-container">
+            <ng-container *ngFor="let component of form?.components">
+                <!-- <ng-container [ngSwitch]="component?.type">
+                    <app-label *ngSwitchCase="'label'" [config]="component" [editMode]="false"></app-label>
+                    <app-text-field *ngSwitchCase="'textfield'" [config]="component" (updateValueEvent)="updateValue($event,component)"  [editMode]="false"></app-text-field>
+                    <app-text-area *ngSwitchCase="'textarea'" [config]="component" (updateValueEvent)="updateValue($event,component)" [editMode]="false"></app-text-area>
+                    <app-columns *ngSwitchCase="'columns'"  [config]="component" (updateValueEvent)="updateValueColumnElement($event,component)" [editMode]="false"></app-columns>
+                    <app-number *ngSwitchCase="'number'" [config]="component" (updateValueEvent)="updateValue($event,component)" [editMode]="false"></app-number>
+                    <app-checkbox *ngSwitchCase="'checkbox'" [config]="component"  [editMode]="false" ></app-checkbox>
+                    <app-selectbox *ngSwitchCase="'selectbox'" [config]="component"  (updateValueEvent)="updateValue($event,component)" [editMode]="false" ></app-selectbox>
+                    <app-radio *ngSwitchCase="'radio'" [config]="component"  [editMode]="false"></app-radio>
+                </ng-container> -->
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+
+.field-ctn{
+    padding-right: 10px;
+}
+
+.checkbox-group{
+    flex:1!important;
+    width: calc(100% - 0px)!important;
+    min-width: 20px!important;
+}
+
+
+label.outer-label{
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.left{
+    display:flex;
+    flex-direction:row;
+    label.outer-label{
+        padding: 15px 0px!important;
+    }
+
+}
+
+.top{
+    display:inline-block!important;
+    flex:1;
+    width: 100%;
+
+
+    label.outer-label{
+        width: 100%!important;
+        padding: 0px!important;
+
+    }
+    
+}
+
+.edit-controls{
+    position: absolute;
+    right: 10px;
+    top:-10px;
+    display: none;
+    gap:15px;
+    align-items: center;
+}
+
+.field-ctn:hover{
+    .edit-controls{
+        position: absolute;
+        display: flex;
+        right: 10px;
+        top:-10px;
+        display: flex;
+        gap:20px;
+        align-items: center;
+    }
+
+}
+
+.c-red{
+    color:rgb(186, 42, 42);
+}
+
+.icon-ctn{
+    background-color: rgb(233, 242, 242);
+    border-radius: 50%;
+}
+
+.bg-red{
+    background-color: rgb(242, 218, 218);
+    color:red!important
+}
+
+.edit-controls > div{
+    cursor: pointer;
+}
+
+
+.c-box {
+    position: relative;
+}
+
+input[type="checkbox"].c-box {
+    display: none;
+}
+.checkbox-group{}
+.checkbox-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid var(--checkbox-background-color);
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 10px;
+}
+
+input[type="checkbox"].c-box:checked + .checkbox-custom {
+    background-color: var(--checkbox-background-color);
+}
+
+input[type="checkbox"].c-box:checked + .checkbox-custom::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-group.row .checkbox-item {
+    display: inline-block;
+    display: flex!important;
+}
+
+.checkbox-group.row {
+    display: flex!important;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+.checkbox-group.column .checkbox-item {
+    display: block;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-right: 35px!important;
+    // padding-left: 35px!important;
+}

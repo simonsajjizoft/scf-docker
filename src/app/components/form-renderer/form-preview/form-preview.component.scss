@@ -1,0 +1,27 @@
+
+.scrollable-div {
+    height: max-content;
+    width: 100%;
+    overflow: visible !important;
+    overflow-x: hidden !important;
+  }
+  
+
+  * {
+  margin: 0;
+  font-family: 'Poppins';
+  overflow-x: hidden;
+  letter-spacing: -0.01rem!important;
+}
+
+.form-area{
+  width: calc(100%);
+  min-height: max-content;
+}
+
+.form-container{
+  border-radius: 6px;
+  width: calc(100% );
+  height: calc(90vh - 20px );
+  overflow-y: scroll;
+}

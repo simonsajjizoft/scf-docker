@@ -1,0 +1,55 @@
+
+
+ .placeholder{
+    width: calc(100% - 2px);
+    height: 120px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    color:rgb(179, 207, 211);
+    color:rgb(201, 213, 214);
+    border: 1px solid whitesmoke;
+    background-color: rgb(251, 252, 253);
+    font-size: 22px;
+    font-weight: 600;   
+    cursor: pointer;
+}
+
+.placeholder span{
+    color:rgb(234, 242, 242);
+    color:rgb(201, 213, 214);
+    font-weight: 400!important;
+    font-size: 17px;
+
+}
+
+.save-icon {
+    width: 12px;
+}
+.close-icon {
+    width: 12px;
+}
+.search-icon {
+    right: 25px;
+    width: 18px;
+    top: 5px;
+}
+
+.down-icon {
+    right: 15px;
+    width: 12px;
+    top: 15px;
+}
+
+.p-relative{
+    position: relative!important;
+
+}
+
+.w-drop{
+    width: 150px!important;
+    font-weight: 400!important;
+    font-size: 14px!important;
+    bottom:-130px!important;
+}

@@ -1,0 +1,12 @@
+<div>
+    <div class="date-picker-container" style="display: grid;">
+        <mat-form-field class="m-t-5 f-s-13">
+            <mat-date-range-input [rangePicker]="picker" style="cursor: pointer;">
+                <input matStartDate readonly placeholder="Start Date" [ngModel]="selectedStartDate" (ngModelChange)="onStartDateChanged($event)">
+                <input matEndDate readonly placeholder="End Date" [ngModel]="selectedEndDate" (ngModelChange)="onEndDateChanged($event)">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+    </div>
+</div>

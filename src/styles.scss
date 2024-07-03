@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+// @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+body {
+  margin: 0;
+  font-family: 'Poppins';
+  overflow-x: hidden;
+  letter-spacing: -0.001rem!important;
+}
+
+.mat-typography {
+  font-family: 'Poppins' !important;
+  /* or any other font settings you prefer */
+}
+
+.mdc-form-field {
+  font-family: 'Poppins' !important;
+}
+
+.mat-tab-label {
+  color: black !important;
+  /* Change to your desired font color */
+}
+
+/* Set the color for the selected tab */
+.mat-tab-label.mat-tab-label-active {
+  color: #438ce7 !important;
+  /* Change to your desired color for the selected tab */
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: var(--blue-text)  !important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  color: black !important;
+  ;
+}
+
+.mat-mdc-tab-group {
+  --mdc-tab-indicator-active-indicator-color: var(--blue-text);
+}
+
+.mdc-checkbox {
+  padding-right: 3px !important;
+}
+
+.mat-mdc-tab-labels {
+  width: 50% !important;
+}
+
+.mat-mdc-tab-header {
+  padding-bottom: 15px;
+  width: 97%;
+}
+
+.mdc-tab {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  font-family:'Poppins'!important;
+  letter-spacing: 0.01rem !important;
+}
+
+.f-s-14 {
+  font-size: 14px !important
+}
+
+.f-s-16 {
+  font-size: 16px !important
+}
+
+.f-s-18 {
+  font-size: 18px !important
+}
+
+.mat-mdc-radio-button .mdc-radio {
+  padding: 0 !important;
+}
+
+.mat-mdc-tab-body-wrapper {
+  height: 100% !important;
+}
+
+h2{
+  margin-bottom: 5px !important;
+}
+
+
+
+.cdk-overlay-container:has(.mat-mdc-dialog-panel ){
+  z-index: 1003!important;
+}
+
+
+/* Styles for the ink bar */
+.mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+  border-color: var(--blue-text)  !important;
+}
+
+.mat-mdc-autocomplete-panel {
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 34px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 8px;
+  }
+
+
+  
+  &::-webkit-scrollbar-thumb{
+    background: #fefeff;
+    border: 3px solid rgba(218, 218, 218, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #ebebeb;
+  }
+  
+}
+.mat-menu-item .mat-icon{
+  margin-right: 2px!important;
+}
+
+.mat-mdc-menu-item{
+  height:40px!important;
+  line-height: 40px;
+  font-family: 'Poppins'!important;
+}
+
+::ng-deep.mat-menu-panel {
+  min-height: max-content!important;
+  min-width: max-content!important;
+  font-family: 'Poppins'!important;
+
+}
+
+.mat-mdc-menu-content{
+  padding: 0px 0px!important;
+  font-family: 'Poppins'!important;
+}
+
+
+cite {
+  font-style: normal !important;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  pointer-events: none;
+  display: block; /* For Firefox */
+  color:gray!important
+  }
+
+  [contenteditable=true]{
+    outline: none!important;
+    border: 2px solid rgb(235, 235, 235);
+    border-radius: 6px;
+  }
+
+.first-letter-caps {
+    text-transform: capitalize !important;
+}

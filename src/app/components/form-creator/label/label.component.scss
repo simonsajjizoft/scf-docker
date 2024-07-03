@@ -1,0 +1,112 @@
+.input-field{
+    flex:1;
+}
+
+
+.input-field{
+    padding-left: 5px!important;
+    height: 30px!important;
+    border-top: 1px solid var(--input-border-color) !important;
+    border-radius: 5px !important;
+    border-right: 1px solid var(--input-border-color) !important;
+    border-bottom: 1px solid var(--input-border-color) !important;
+    border-left: 1px solid var(--input-border-color) !important;
+    font-family: 'Poppins' !important;
+}
+
+.input-field.ip-f-reqd{
+    border-left: 2px solid var(--primary-color) !important;
+}
+
+.input-field.ip-f-reqd,
+.input-field.ip-f-reqd:focus {
+    border-left: 2px solid var(--primary-color) !important;
+}
+
+.input-field:focus {
+    border-top: 1px solid var(--input-focus) !important;
+    border-right: 1px solid var(--input-focus) !important;
+    border-bottom: 1px solid var(--input-focus) !important;
+    border-left: 1px solid var(--input-focus) !important;
+    outline: none !important;
+}
+
+
+
+.field-ctn{
+    padding-right: 10px;
+}
+
+label{
+    margin-left:10px
+}
+
+
+.left{
+    display:flex;
+    flex-direction:row;
+    label{
+        padding: 15px 0px!important;
+    }
+    
+    
+}
+
+.top{
+    display:inline-block!important;
+    flex:1;
+    width: 100%;
+    .input-field{
+        flex:1!important;
+        height: 30px!important;
+        min-width: calc(100% - 20px);
+        margin-top:10px
+    }
+
+    label{
+        width: 100%!important;
+        padding: 0px!important;
+
+    }
+    
+}
+
+.edit-controls{
+    position: absolute;
+    right: 10px;
+    top:-10px;
+    display: none;
+    gap:15px;
+    align-items: center;
+}
+
+.field-ctn:hover{
+    .edit-controls{
+        position: absolute;
+        display: flex;
+        right: 10px;
+        top:-10px;
+        display: flex;
+        gap:20px;
+        align-items: center;
+    }
+
+}
+
+.c-red{
+    color:rgb(186, 42, 42);
+}
+
+.icon-ctn{
+    background-color: rgb(233, 242, 242);
+    border-radius: 50%;
+}
+
+.bg-red{
+    background-color: rgb(242, 218, 218);
+    color:red!important
+}
+
+.edit-controls > div{
+    cursor: pointer;
+}

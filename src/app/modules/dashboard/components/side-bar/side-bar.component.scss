@@ -1,0 +1,111 @@
+.item-parent:hover{
+    .child-item{
+        display: block;
+    }
+}
+
+.item:hover{
+    background-color: #dbf4f4;
+}
+
+.item{
+    color:#1B7692!important;
+}
+
+.item p{
+    color:black;
+}
+
+
+
+.selected-item{
+    background-color: #add4df!important;
+    color:#08333E!important;
+}
+
+.selected-item p{
+    color:#08333E!important;
+    font-weight: 500!important
+}
+
+.child-item .selected-item{
+    background-color: #B0D8D8!important;
+    color:black!important;
+    font-weight: 500;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+.item-parent{
+    position: relative;
+}
+
+.child-item{
+    // left: 94px;
+    // z-index: 9;
+    // position: absolute;
+    // text-align: justify;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #D3E7E7;
+    // display: none;
+    // min-width: 125px;
+    font-size: 14px!important;
+    position: relative;
+    overflow: visible;
+}
+
+.child-item p{
+    padding: 8px 10px;
+    min-width: 200px!important;
+    letter-spacing: -0.00rem!important;
+    font-weight: 500;
+}
+
+.child-item p:hover{
+    background-color: #dbf4f4;
+}
+
+.nav-ctn{
+    height: max-content;
+    min-height: 100%;
+}
+
+::ng-deep .cdk-overlay-connected-position-bounding-box:has(.child-item) {
+    margin-left: 100px!important;
+    padding-left: 10px;
+
+}
+
+.custom-sidemenu{
+    letter-spacing: -0.01rem!important;
+}
+
+.item-parent{
+    z-index: 1001!important;
+}
+
+::ng-deep .mat-mdc-menu-panel{
+    border-radius: 0px!important;
+    // box-shadow: 4px 4px 3px 4px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.044), 3px 3px 5px 0px rgba(0, 0, 0, 0.042)!important;
+}
+
+::ng-deep .mat-mdc-menu-panel.custom-sidemenu{
+    box-shadow: 3px 3px 1px -2px rgba(0, 0, 0, 0.15), 2px 2px 2px 0px rgba(0, 0, 0, 0.10), 1px 1px 5px 0px rgba(0, 0, 0, 0.10)!important;
+
+}
+
+::ng-deep.cdk-overlay-connected-position-bounding-box:has(.child-item):after {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    width: 0;
+    height: 0px;
+    transform: rotate(-45deg);
+    background-color: transparent!important;
+    content:'';
+    border-top: 20px solid #D3E7E7;
+    border-left: 5px solid #D3E7E7;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}

@@ -1,0 +1,256 @@
+<div class="header-area">
+    <app-header></app-header>
+  </div>
+<div>
+    <div class="loader-parent" *ngIf="showLoader">
+        <img src="assets/gif/loader.gif">
+    </div>
+    <div class="o-container p-relative">
+        <!-- Header Section -->
+        <div class="c-h-container d-flex align-center justify-between">
+            <!-- Section 1: Notification Header -->
+            <div class="header-section1 d-flex align-center">
+                <div class="row header-Section p-b-0 j-space p-r-15 p-l-15 p-t-0">
+                    <div class="d-flex align-center w-100">
+                        <div class="row d-flex icon-text-box c-pointer">
+                            <div (click)=" backTohome()" class="d-flex">
+                                <!-- <img class="h-panel-home-icon m-r-5 m-t-0" src="assets/icons/clarity_home-line (1).svg"> -->
+                                <svg class="h-panel-home-icon m-r-5 m-t-0" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_470_4217)">
+                                        <path
+                                            d="M20.6006 10.567L11.4339 1.40036C11.3194 1.28654 11.1646 1.22266 11.0031 1.22266C10.8417 1.22266 10.6868 1.28654 10.5723 1.40036L1.40561 10.567C1.3055 10.6839 1.25318 10.8343 1.25912 10.9881C1.26506 11.1419 1.32882 11.2878 1.43766 11.3967C1.54649 11.5055 1.69239 11.5692 1.84619 11.5752C1.99999 11.5811 2.15037 11.5288 2.26728 11.4287L11.0001 2.69592L19.7328 11.4348C19.8497 11.5349 20.0001 11.5872 20.1539 11.5813C20.3077 11.5754 20.4536 11.5116 20.5625 11.4028C20.6713 11.2939 20.7351 11.148 20.741 10.9942C20.7469 10.8404 20.6946 10.69 20.5945 10.5731L20.6006 10.567Z"
+                                            fill="black" />
+                                        <path
+                                            d="M17.1111 19.5557H14.0555V13.4446H7.9444V19.5557H4.88885V11.0002L3.66663 12.2224V19.5557C3.66663 19.8799 3.7954 20.1908 4.02461 20.42C4.25382 20.6492 4.56469 20.778 4.88885 20.778H9.16663V14.6668H12.8333V20.778H17.1111C17.4352 20.778 17.7461 20.6492 17.9753 20.42C18.2045 20.1908 18.3333 19.8799 18.3333 19.5557V12.0757L17.1111 10.8535V19.5557Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_470_4217">
+                                            <rect width="22" height="22" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <label class="h-panel-i-label m-b-0 c-pointer">{{'home'| translate}}</label>
+                            </div>
+                            <mat-icon class="d-flex right-icon">chevron_right</mat-icon>
+                        </div>
+                        <div class="row d-flex  icon-text-box">
+                            <div   class="bell d-flex">
+                                <div (click)="navigateToNotifications()">
+                                    <svg class="svg-icon" width="17" height="20" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="themecolor stroke-med" stroke="currentColor"
+                                            d="M13.9523 18.7692V19.6154C13.9523 20.513 13.5886 21.3739 12.9413 22.0087C12.294 22.6434 11.4161 23 10.5006 23C9.58522 23 8.70729 22.6434 8.05998 22.0087C7.41268 21.3739 7.04903 20.513 7.04903 19.6154V18.7692M19.7596 17.0468C18.3746 15.3846 17.3969 14.5385 17.3969 9.95601C17.3969 5.75962 15.2116 4.26457 13.4129 3.53846C13.174 3.44221 12.9491 3.22115 12.8763 2.98053C12.5608 1.9276 11.6764 1 10.5006 1C9.32494 1 8.43992 1.92813 8.12766 2.98159C8.05485 3.22486 7.82995 3.44221 7.59104 3.53846C5.79026 4.26563 3.60711 5.75538 3.60711 9.95601C3.60442 14.5385 2.62664 15.3846 1.24168 17.0468C0.667846 17.7353 1.17049 18.7692 2.17415 18.7692H18.8325C19.8308 18.7692 20.3302 17.7322 19.7596 17.0468Z"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <circle cx="17" cy="5" r="3.5" fill="#07A6F9" stroke="white" />
+                                    </svg>
+                                </div>
+                                <!-- <img src="assets/icons/bell-icon-alt.svg" class="n-icon " alt="Notification Icon"> -->
+                                <div class="d-flex">
+                                    <p (click)="navigateToNotifications()" class=" m-b-0 c-pointer m-l-5  ">{{'notifications' | translate}}</p>
+                                    <mat-icon class="right-icon  m-t-0 m-b-10">chevron_right</mat-icon>
+                                </div>
+                                <div class="d-flex">
+                                    <div>
+                                        <svg class="menu-icon" width="20" height="22" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21 9L19.005 20.346C18.9236 20.8094 18.6815 21.2292 18.3212 21.5317C17.9609 21.8342 17.5055 22 17.035 22H8.965C8.49454 22 8.03913 21.8342 7.67882 21.5317C7.31852 21.2292 7.07639 20.8094 6.995 20.346L5 9"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M18.4387 3.89793L12.9553 5.15202M12.9553 5.15202L12.5094 3.20236C12.3912 2.68528 12.0723 2.23636 11.6231 1.95435C11.1738 1.67234 10.6309 1.58035 10.1139 1.69861L7.43308 2.31172C6.91599 2.42998 6.46707 2.74881 6.18506 3.19806C5.90305 3.64732 5.81106 4.1902 5.92932 4.70728L6.37522 6.65694M12.9553 5.15202L6.37522 6.65694M0.891802 7.91104L6.37522 6.65694"
+                                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <p class=" m-b-0 c-pointer clear-bucket-title">{{'clearBuckets' | translate}}</p>
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <hr class="horizontal-bar m-t-0 m-b-0 m-l-20 m-r-20">
+            </div>
+
+            <!-- Section 2: Search and checkboxes -->
+            <div class="header-section2 d-flex align-center justify-end flex-1 m-r-20">
+                <img *ngIf="hasFilterValues()" src="assets/icons/filter.png" width="22px" height="22px"
+                    title="Clear Filters" class="c-pointer m-r-20" alt="" (click)="clearFilters()">
+                <!-- <div class="d-flex align-center flex-1"> -->
+                <div class="search-container d-flex align-center">
+                    <input type="text" class="search-input" placeholder="Search in Notifications"
+                        [(ngModel)]="filterQuery.searchValue" (keydown.enter)="toggleIcon()">
+                    <!-- <img *ngIf="showCancelIcon()" src="/assets/icons/cancel.svg" class="cancel-icon" alt="Cancel Icon"
+                        (click)="clearSearch()"> -->
+                    <div *ngIf="showCancelIcon()">
+                        <div (click)="clearSearch()">
+                            <svg class="cancel-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11.486L6.243 6.243L11.486 11.486M11.486 1L6.242 6.243L1 1" stroke="#1B7692"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- <img *ngIf="!showCancelIcon()" src="/assets/icons/Icon feather-search.svg" class="search-icon"
+                        alt="Search Icon" (click)="toggleIcon()"> -->
+                    <div *ngIf="!showCancelIcon()">
+                        <div (click)="toggleIcon()">
+                            <svg class="search-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.6007 11.8003C21.6007 17.2129 17.2129 21.6007 11.8003 21.6007C6.38776 21.6007 2 17.2129 2 11.8003C2 6.38776 6.38777 2 11.8003 2C17.2129 2 21.6007 6.38777 21.6007 11.8003Z"
+                                    stroke="#1B7692" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M24.0511 24.0516L18.7222 18.7227" stroke="#1B7692" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+   
+                <div class="m-l-20">
+                    <app-date-range-picker (dateRangeSelected)="onDateRangeSelected($event)"></app-date-range-picker>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    
+    <div *ngIf="!showSkelton">
+        <div #tasksParentArea class="n-content-container p-b-0 j-space b-left"
+        (scroll)="onScroll($event)">
+        <!-- Header -->
+        <!-- <div class="custom-line "> -->
+        <div class="table-header d-flex sticky-top">
+            <div class=" left-cell p-5 p-b-15 p-t-15 p-r-30 p-l-30 d-flex f-w-600">
+                <div> {{'sourceOfNotification' | translate}}</div>
+                <div class="clear-bucket c-pointer f-s-10 d-flex" (click)="deleteAllNotifications()">
+                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4574 2.82353H12.6596V1.94118C12.6596 1.42634 12.45 0.932599 12.0769 0.568558C11.7038 0.204516 11.1978 0 10.6702 0H6.32979C5.80218 0 5.29617 0.204516 4.9231 0.568558C4.55002 0.932599 4.34043 1.42634 4.34043 1.94118V2.82353H0.542553C0.398659 2.82353 0.260659 2.87931 0.15891 2.97859C0.0571616 3.07787 0 3.21253 0 3.35294C0 3.49335 0.0571616 3.62801 0.15891 3.72729C0.260659 3.82658 0.398659 3.88235 0.542553 3.88235H1.44681V16.7647C1.44681 17.0923 1.58019 17.4065 1.8176 17.6382C2.05501 17.8699 2.37701 18 2.71277 18H14.2872C14.623 18 14.945 17.8699 15.1824 17.6382C15.4198 17.4065 15.5532 17.0923 15.5532 16.7647V3.88235H16.4574C16.6013 3.88235 16.7393 3.82658 16.8411 3.72729C16.9428 3.62801 17 3.49335 17 3.35294C17 3.21253 16.9428 3.07787 16.8411 2.97859C16.7393 2.87931 16.6013 2.82353 16.4574 2.82353ZM5.42553 1.94118C5.42553 1.70716 5.5208 1.48273 5.69038 1.31726C5.85996 1.15179 6.08996 1.05882 6.32979 1.05882H10.6702C10.91 1.05882 11.14 1.15179 11.3096 1.31726C11.4792 1.48273 11.5745 1.70716 11.5745 1.94118V2.82353H5.42553V1.94118ZM14.4681 16.7647C14.4681 16.8115 14.449 16.8564 14.4151 16.8895C14.3812 16.9226 14.3352 16.9412 14.2872 16.9412H2.71277C2.6648 16.9412 2.6188 16.9226 2.58488 16.8895C2.55097 16.8564 2.53191 16.8115 2.53191 16.7647V3.88235H14.4681V16.7647ZM6.87234 7.58824V13.2353C6.87234 13.3757 6.81518 13.5104 6.71343 13.6096C6.61168 13.7089 6.47368 13.7647 6.32979 13.7647C6.18589 13.7647 6.04789 13.7089 5.94614 13.6096C5.8444 13.5104 5.78723 13.3757 5.78723 13.2353V7.58824C5.78723 7.44783 5.8444 7.31317 5.94614 7.21389C6.04789 7.1146 6.18589 7.05882 6.32979 7.05882C6.47368 7.05882 6.61168 7.1146 6.71343 7.21389C6.81518 7.31317 6.87234 7.44783 6.87234 7.58824ZM11.2128 7.58824V13.2353C11.2128 13.3757 11.1556 13.5104 11.0539 13.6096C10.9521 13.7089 10.8141 13.7647 10.6702 13.7647C10.5263 13.7647 10.3883 13.7089 10.2866 13.6096C10.1848 13.5104 10.1277 13.3757 10.1277 13.2353V7.58824C10.1277 7.44783 10.1848 7.31317 10.2866 7.21389C10.3883 7.1146 10.5263 7.05882 10.6702 7.05882C10.8141 7.05882 10.9521 7.1146 11.0539 7.21389C11.1556 7.31317 11.2128 7.44783 11.2128 7.58824Z" fill="#707070"/>
+                        </svg>
+
+                    <div class="f-w-200 p-l-5" >{{'deleteAll' | translate}}</div>
+                </div>
+
+            </div>
+            <div class=" p-5 p-l-10 p-b-15 p-t-15 right-cell custom-h f-w-600">{{'notificationMessage' | translate}}</div>
+        </div>
+        <!-- </div> -->
+        <!-- Row Sections -->
+        <ng-container *ngFor="let data of list; let i = index">
+            <div class="notification-row d-flex">
+                <div>
+                    <!-- <img class="user-icon m-t-12 p-t-5 p-t-5 m-l-25" src="assets/icons/ph_user-thin-teal.svg"
+                        alt="User"> -->
+                    <div>
+                        <svg class="user-icon  svg-icon m-t-12 p-t-5 p-t-5 m-l-25" width="130" height="132" viewBox="0 0 130 132"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="themecolor stroke-med" stroke="currentColor"
+                                d="M114.704 109.86C106.378 95.3161 93.0318 85.3857 77.5691 81.8057C84.9167 78.764 90.9911 73.2388 94.7544 66.1741C98.5177 59.1093 99.7364 50.9434 98.2023 43.0715C96.6682 35.1996 92.4766 28.1102 86.3435 23.0144C80.2103 17.9187 72.5164 15.1328 64.576 15.1328C56.6357 15.1328 48.9417 17.9187 42.8085 23.0144C36.6754 28.1102 32.4838 35.1996 30.9497 43.0715C29.4156 50.9434 30.6344 59.1093 34.3977 66.1741C38.1609 73.2388 44.2353 78.764 51.5829 81.8057C36.1403 85.3705 22.7742 95.3161 14.4482 109.86C14.2071 110.326 14.1535 110.867 14.2983 111.372C14.4432 111.877 14.7754 112.305 15.2256 112.568C15.6758 112.831 16.2091 112.908 16.7141 112.783C17.2192 112.658 17.6569 112.341 17.9358 111.897C27.784 94.6795 45.2325 84.3978 64.576 84.3978C83.9195 84.3978 101.368 94.6795 111.216 111.897C111.393 112.207 111.647 112.464 111.953 112.642C112.259 112.821 112.606 112.915 112.96 112.916C113.314 112.917 113.662 112.822 113.968 112.641C114.43 112.37 114.767 111.926 114.905 111.404C115.043 110.883 114.971 110.328 114.704 109.86ZM34.336 49.7688C34.336 43.7256 36.1095 37.8181 39.4324 32.7933C42.7552 27.7686 47.478 23.8523 53.0037 21.5396C58.5293 19.227 64.6095 18.6219 70.4755 19.8009C76.3415 20.9799 81.7298 23.8899 85.9589 28.1631C90.188 32.4363 93.0681 37.8807 94.235 43.8078C95.4018 49.7349 94.8029 55.8785 92.5141 61.4617C90.2253 67.0449 86.3494 71.8169 81.3764 75.1743C76.4035 78.5318 70.5569 80.3238 64.576 80.3238C56.5587 80.3144 48.8725 77.0921 43.2034 71.364C37.5343 65.6359 34.3453 57.8696 34.336 49.7688Z"
+                                fill="#1B7692" />
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="left-cell p-5 p-b-15 p-t-15 b-bottom">
+                    <label class="m-b-0 p-b-0 f-w-500 f-s-13 m-l-10">{{ data.name }}</label> |
+                    <label class="m-b-0 p-b-0 p-5 f-w-500 f-s-13">{{ data.group }}</label>
+                    <div class="p-l-10 d-flex">
+                        <label class="m-b-0 f-s-12">{{ data.time | date:'h:mm a MMMM dd, yyyy' }}</label>
+                        <div class="tick-icons-container">
+                            <div *ngIf="data.read">
+                                <!-- <img class="tick-icon" src="/assets/icons/double_tick.svg"
+                            alt="Double Tick"> -->
+                                <svg class="tick-icon" width="22" height="13" viewBox="0 0 24 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.657 2.17181L12.354 7.47581L10.94 6.06081L16.243 0.757812L17.657 2.17181ZM23.314 2.17181L12.708 12.7788L6.34401 6.41481L7.75801 5.00081L12.708 9.95081L21.9 0.757812L23.314 2.17181ZM2.10101 5.00081L7.05101 9.95081L7.40401 9.59681L8.81801 11.0108L7.05001 12.7788L0.687012 6.41481L2.10101 5.00081Z"
+                                        fill="#1B7692" />
+                                </svg>
+                            </div>
+                            <div *ngIf="!data.read">
+                                <!-- <img  class="tick-icon" src="/assets/icons/single_tick.svg"
+                            alt="Single Tick"> -->
+                                <svg width="22" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.00015 16.1698L5.53015 12.6998C5.34317 12.5129 5.08957 12.4078 4.82515 12.4078C4.56072 12.4078 4.30712 12.5129 4.12015 12.6998C3.93317 12.8868 3.82813 13.1404 3.82812 13.4048C3.82813 13.5358 3.85391 13.6654 3.90402 13.7864C3.95412 13.9073 4.02756 14.0173 4.12015 14.1098L8.30015 18.2898C8.69015 18.6798 9.32015 18.6798 9.71015 18.2898L20.2901 7.70983C20.4771 7.52286 20.5822 7.26926 20.5822 7.00483C20.5822 6.74041 20.4771 6.48681 20.2901 6.29983C20.1032 6.11286 19.8496 6.00781 19.5851 6.00781C19.3207 6.00781 19.0671 6.11286 18.8801 6.29983L9.00015 16.1698Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div (click)="restoreNotificationById(data?.id)" class="restore c-pointer f-s-10 d-flex m-r-10 m-t-12" title="{{'restore' | translate}}">
+                        <svg width="18" height="17" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.875 4.58464L14.4583 9.58464M2.375 4.58464L2.87917 12.9488C3.0075 15.0905 3.0725 16.1613 3.6075 16.9321C3.87167 17.3126 4.21224 17.6339 4.6075 17.8755C5.0925 18.1721 5.6775 18.2888 6.54167 18.3346M7.79167 12.918L8.73833 14.1396C8.91028 13.4978 9.27015 12.9219 9.77174 12.4861C10.2733 12.0502 10.8937 11.7742 11.5533 11.6935C12.2129 11.6128 12.8815 11.7311 13.4734 12.0332C14.0653 12.3352 14.5534 12.8073 14.875 13.3888M16.125 17.0846L15.1783 15.8646C15.0078 16.5015 14.6522 17.0735 14.1565 17.5082C13.6608 17.943 13.0474 18.221 12.3937 18.3071C11.74 18.3931 11.0755 18.2834 10.4842 17.9918C9.89286 17.7002 9.4013 17.2398 9.07167 16.6688M1.125 4.58464H16.125M12.005 4.58464L11.4358 3.4113C11.0583 2.6313 10.8692 2.24214 10.5433 1.9988C10.471 1.9449 10.3943 1.89696 10.3142 1.85547C9.95333 1.66797 9.52 1.66797 8.65417 1.66797C7.76583 1.66797 7.32167 1.66797 6.95417 1.86297C6.87293 1.90648 6.79544 1.95665 6.7225 2.01297C6.39333 2.26547 6.20917 2.66964 5.84083 3.47714L5.33583 4.58464" stroke="#1B7692" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </div>
+                    <div (click)="deleteNotificationsByIds(data?.id)" class="delete c-pointer f-s-10 d-flex" title="{{'delete' | translate}}">
+                        <svg width="18" height="17" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.4574 2.82353H12.6596V1.94118C12.6596 1.42634 12.45 0.932599 12.0769 0.568558C11.7038 0.204516 11.1978 0 10.6702 0H6.32979C5.80218 0 5.29617 0.204516 4.9231 0.568558C4.55002 0.932599 4.34043 1.42634 4.34043 1.94118V2.82353H0.542553C0.398659 2.82353 0.260659 2.87931 0.15891 2.97859C0.0571616 3.07787 0 3.21253 0 3.35294C0 3.49335 0.0571616 3.62801 0.15891 3.72729C0.260659 3.82658 0.398659 3.88235 0.542553 3.88235H1.44681V16.7647C1.44681 17.0923 1.58019 17.4065 1.8176 17.6382C2.05501 17.8699 2.37701 18 2.71277 18H14.2872C14.623 18 14.945 17.8699 15.1824 17.6382C15.4198 17.4065 15.5532 17.0923 15.5532 16.7647V3.88235H16.4574C16.6013 3.88235 16.7393 3.82658 16.8411 3.72729C16.9428 3.62801 17 3.49335 17 3.35294C17 3.21253 16.9428 3.07787 16.8411 2.97859C16.7393 2.87931 16.6013 2.82353 16.4574 2.82353ZM5.42553 1.94118C5.42553 1.70716 5.5208 1.48273 5.69038 1.31726C5.85996 1.15179 6.08996 1.05882 6.32979 1.05882H10.6702C10.91 1.05882 11.14 1.15179 11.3096 1.31726C11.4792 1.48273 11.5745 1.70716 11.5745 1.94118V2.82353H5.42553V1.94118ZM14.4681 16.7647C14.4681 16.8115 14.449 16.8564 14.4151 16.8895C14.3812 16.9226 14.3352 16.9412 14.2872 16.9412H2.71277C2.6648 16.9412 2.6188 16.9226 2.58488 16.8895C2.55097 16.8564 2.53191 16.8115 2.53191 16.7647V3.88235H14.4681V16.7647ZM6.87234 7.58824V13.2353C6.87234 13.3757 6.81518 13.5104 6.71343 13.6096C6.61168 13.7089 6.47368 13.7647 6.32979 13.7647C6.18589 13.7647 6.04789 13.7089 5.94614 13.6096C5.8444 13.5104 5.78723 13.3757 5.78723 13.2353V7.58824C5.78723 7.44783 5.8444 7.31317 5.94614 7.21389C6.04789 7.1146 6.18589 7.05882 6.32979 7.05882C6.47368 7.05882 6.61168 7.1146 6.71343 7.21389C6.81518 7.31317 6.87234 7.44783 6.87234 7.58824ZM11.2128 7.58824V13.2353C11.2128 13.3757 11.1556 13.5104 11.0539 13.6096C10.9521 13.7089 10.8141 13.7647 10.6702 13.7647C10.5263 13.7647 10.3883 13.7089 10.2866 13.6096C10.1848 13.5104 10.1277 13.3757 10.1277 13.2353V7.58824C10.1277 7.44783 10.1848 7.31317 10.2866 7.21389C10.3883 7.1146 10.5263 7.05882 10.6702 7.05882C10.8141 7.05882 10.9521 7.1146 11.0539 7.21389C11.1556 7.31317 11.2128 7.44783 11.2128 7.58824Z" fill="#707070"/>
+                            </svg>
+                            
+                    </div>
+                </div>
+                <div class="right-cell m-r-20 p-10 p-b-15 p-t-15 b-bottom">
+                    <div class="message f-w-600 f-s-13 p-b-10">{{ data.title }}</div>
+                    <div class="message f-s-13">{{ data.content }}</div>
+                </div>
+            </div>
+        </ng-container>
+        <div *ngIf="noResultsFound" class="align-center m-t-30 p-t-15  d-flex j-center w-100 light-grey-text">
+            No Notifications Found.
+        </div>
+    </div>
+</div>
+    <div *ngIf="showSkelton || showLoader" class="n-content-container p-b-0 j-space b-left p-relative">
+
+        <div *ngIf="showSkelton">
+            <div class="custom-line ">
+                <div class="table-header d-flex">
+                    <div class=" left-cell p-5 p-b-15 p-t-15 p-r-30 p-l-30 custom-h f-w-600">{{'sourceOfNotification' | translate}}
+                    </div>
+                    <div class=" p-5 p-l-10 p-b-15 p-t-15 right-cell custom-h f-w-600">{{'notificationMessage' | translate}}</div>
+                </div>
+            </div>
+            <div *ngFor="let ldr of [1,2,3,4,5,6,7,8,9,10]" class=" d-flex">
+                <div>
+                    <div class="user-icon2 m-t-12 p-t-5 p-t-5 m-l-25">
+                        <div>
+                            <ngx-skeleton-loader class="skeleton-circle"
+                                [theme]="{height: '40px',width: '40px',margin:0}" count="1" appearance="circle" />
+                        </div>
+                    </div>
+                </div>
+                <div class="left-cell2 p-5 m-l-5 p-b-15 p-t-15 d-flex  align-center">
+                    <div>
+                        <div>
+                            <ngx-skeleton-loader count="1" [theme]="{width:'20vw',height:'16px','margin-bottom':'2px'}"
+                                appearance="line" />
+                        </div>
+                        <div>
+                            <ngx-skeleton-loader count="1" [theme]="{width:'22vw',height:'12px','margin-bottom':'2px'}"
+                                appearance="line" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-cell2 m-r-20 p-10 p-b-15 p-t-15 d-flex j-center">
+                    <div>
+                        <ngx-skeleton-loader count="1" [theme]="{width:'25vw',height:'16px'}" appearance="line" />
+                    </div>
+                    <div>
+                        <ngx-skeleton-loader count="1" [theme]="{width:'50vw',height:'16px','margin-bottom':'2px'}"
+                            appearance="line" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

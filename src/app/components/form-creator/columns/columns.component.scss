@@ -1,0 +1,154 @@
+.columns-container{
+    display: grid;
+    gap:10px;
+    min-height: 0;  /* NEW */
+    min-width: 0; 
+}
+
+.border-ctn{
+    border-radius: 5px;
+    border: 2px dashed rgb(237, 239, 240);
+}
+
+.ctn{
+    padding: 15px 0px;
+}
+
+.marginy-5{
+    margin:5px 0px;
+}
+
+.columns-1{
+    grid-template-columns: 100%;
+}
+
+.columns-2{
+    grid-template-columns: calc(50% - 4.5px) calc(50% - 4.5px);
+}
+
+.columns-3{
+    grid-template-columns: calc(33.33% - 6px) calc(33.33% - 6px) calc(33.33% - 6px);
+}
+
+.columns-4{
+    grid-template-columns:  calc(25% - 7.2px)  calc(25% - 7.2px)  calc(25% - 7.2px) calc(25% - 7.2px);
+}
+
+.columns-1-2{
+    grid-template-columns: calc(30% - 5px) calc(70% - 5px);
+}
+
+.columns-2-1{
+    grid-template-columns:  calc(70% - 5px) calc(30% - 5px);
+}
+
+
+
+
+.column{
+    width: 100%;
+    padding-right: 10px;
+    height: max-content;
+    border-radius: 5px;    
+    overflow-y: visible;
+    min-width: 0; 
+}
+
+.column .placeholder{
+    width: calc(100% - 2px);
+    height: 120px;
+    min-height: 100%;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    color:rgb(179, 207, 211);
+    color:rgb(201, 213, 214);
+    border: 1px solid whitesmoke;
+    background-color: rgb(251, 252, 253);
+    font-size: 22px;
+    font-weight: 600;   
+    cursor: pointer;
+}
+
+.placeholder span{
+    color:rgb(234, 242, 242);
+    color:rgb(201, 213, 214);
+    font-weight: 400!important;
+    font-size: 17px;
+
+}
+
+.save-icon {
+    width: 12px;
+}
+.close-icon {
+    width: 12px;
+}
+.search-icon {
+    right: 25px;
+    width: 18px;
+    top: 5px;
+}
+
+.down-icon {
+    right: 15px;
+    width: 12px;
+    top: 15px;
+}
+
+.p-relative{
+    position: relative!important;
+
+}
+
+.w-drop{
+    width: 150px!important;
+    font-weight: 400!important;
+    font-size: 14px!important;
+}
+
+
+.edit-controls{
+    position: absolute;
+    right: 10px;
+    top:-30px;
+    display: none;
+    gap:15px;
+    align-items: center;
+}
+
+.ctn:hover{
+    .edit-controls{
+        position: absolute;
+        display: flex;
+        right: 10px;
+        top:-30px;
+        display: flex;
+        gap:20px;
+        align-items: center;
+    }
+
+}
+
+.c-red{
+    color:rgb(186, 42, 42);
+}
+
+.icon-ctn{
+    background-color: rgb(233, 242, 242);
+    border-radius: 50%;
+}
+
+.bg-red{
+    background-color: rgb(242, 218, 218);
+    color:red!important
+}
+
+.edit-controls > div{
+    cursor: pointer;
+}
+
+.m-10{
+    margin: 10px!important;
+}
