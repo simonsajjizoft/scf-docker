@@ -3,3 +3,44 @@
     min-height: 100%!important;
     height: 100%;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-right: 4%;
+}
+
+.submit-btn {
+    background-color: #F26334;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.docker-btn {
+    color: #F26334;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #F26334;
+    cursor: pointer;
+}
+
+.gtin-item {
+    padding: 8px 16px;
+    display: flex;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.gtin-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; 
+}
