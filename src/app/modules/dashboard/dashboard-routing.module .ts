@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: '', component: LandingPageComponent, 
       children: [
         { path: '', component: ProsyncHomeComponent },
-        { path: 'gln', component: GlnDetailsComponent },
+        { path: 'capture-form', component: GlnDetailsComponent },
       ]
     }
 ];
