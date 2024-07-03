@@ -185,3 +185,23 @@ cite {
   border-radius: 9999px;
   background-color: #ebebeb;
 }
+
+button{
+  font-family: 'Poppins'!important;
+}
+
+.primary-btn{
+  background-color: #F26334;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.secondary-btn{
+  color: #F26334;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #F26334;
+  cursor: pointer;
+}
