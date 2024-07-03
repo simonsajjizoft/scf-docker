@@ -7,7 +7,11 @@
 }
 
 .secondary-color{
-    background-color: var(--secondary-color) !important;
+    color: #F26334 !important;
+}
+
+.secondary-bg-color{
+    background: #F26334 !important;
 }
 
 .light-grey-color {
@@ -302,4 +306,10 @@ tbody tr:nth-child(even) {
     stroke-width: 0.5px;
   }
 
-  
+  .c-grey{
+    color:grey!important
+  }
+
+  .flex-col{
+    flex-direction: column!important;
+  }
