@@ -57,7 +57,7 @@
 
 .content{
     overflow: hidden!important;
-    max-height: calc(100vh - 130px)!important;
+    min-height: 100%!important;
 }
 
 .group-icon {
@@ -114,5 +114,5 @@
 }
 
 .router-area{
-    width: calc(100vw - 130px)!important;
+    width: calc(100vw - 115px)!important;
 }

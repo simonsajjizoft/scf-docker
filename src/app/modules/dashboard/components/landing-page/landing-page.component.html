@@ -5,10 +5,7 @@
     <div class="side-nav ">
         <app-side-bar [currentPageData]="currentPageData"></app-side-bar>
     </div>
-    <div class="router-area m-r-20 m-l-5">
-        <div>
-            <app-second-header (currentPageChange)="currentPageChange($event)"></app-second-header>
-        </div>
+    <div class="router-area m-r-15 m-l-5">
         <div class="content">
             <router-outlet></router-outlet>
         </div>
