@@ -12,8 +12,8 @@ import { SharedModule } from '../shared/shared.module';
 import { ListViewComponent } from './components/capture-forms/list-view/list-view.component';
 import { GtinFormDetailsComponent } from './components/capture-forms/gtin-form-details/gtin-form-details.component';
 import { GlnDetailsComponent } from './components/capture-forms/gln-details/gln-details.component';
-import { ProsyncHomeComponent } from './components/prosync-demo/prosync-home/prosync-home.component';
-import { GtinsListComponent } from './components/prosync-demo/gtins-list/gtins-list.component';
+import { GtinsListComponent } from './components/home-gtins/gtins-list/gtins-list.component';
+import { GtinsHomeComponent } from './components/home-gtins/gtins-home/gtins-home.component';
 
 
 @NgModule({
@@ -24,8 +24,8 @@ import { GtinsListComponent } from './components/prosync-demo/gtins-list/gtins-l
    ListViewComponent,
    GtinFormDetailsComponent,
    GlnDetailsComponent,
-   ProsyncHomeComponent,
-   GtinsListComponent
+   GtinsListComponent,
+   GtinsHomeComponent
   ],
   imports: [
     DashboardRoutingModule,

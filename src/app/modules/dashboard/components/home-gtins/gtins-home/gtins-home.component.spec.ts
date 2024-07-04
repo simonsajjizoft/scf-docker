@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProsyncHomeComponent } from './prosync-home.component';
+import { GtinsHomeComponent } from './gtins-home.component';
 
-describe('ProsyncHomeComponent', () => {
-  let component: ProsyncHomeComponent;
-  let fixture: ComponentFixture<ProsyncHomeComponent>;
+describe('GtinsHomeComponent', () => {
+  let component: GtinsHomeComponent;
+  let fixture: ComponentFixture<GtinsHomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProsyncHomeComponent]
+      declarations: [GtinsHomeComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ProsyncHomeComponent);
+    fixture = TestBed.createComponent(GtinsHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
